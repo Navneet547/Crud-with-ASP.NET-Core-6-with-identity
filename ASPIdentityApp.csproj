@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Client\**" />
+	  <Content Remove="Client\**" />
+	  <EmbeddedResource Remove="Client\**" />
+	  <None Remove="Client\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="wwwroot\dist\out-tsc\app\app-routing.module.js" />
+	  <Content Remove="wwwroot\dist\out-tsc\app\app-routing.module.js.map" />
+	  <Content Remove="wwwroot\dist\out-tsc\app\app.component.js" />
+	  <Content Remove="wwwroot\dist\out-tsc\app\app.component.js.map" />
+	  <Content Remove="wwwroot\dist\out-tsc\app\app.component.spec.js" />
+	  <Content Remove="wwwroot\dist\out-tsc\app\app.component.spec.js.map" />
+	  <Content Remove="wwwroot\dist\out-tsc\app\app.module.js" />
+	  <Content Remove="wwwroot\dist\out-tsc\app\app.module.js.map" />
+	  <Content Remove="wwwroot\dist\out-tsc\app\employee-dashboard\employee-dashboard.component.js" />
+	  <Content Remove="wwwroot\dist\out-tsc\app\employee-dashboard\employee-dashboard.component.js.map" />
+	  <Content Remove="wwwroot\dist\out-tsc\app\employee-dashboard\employee-dashboard.component.spec.js" />
+	  <Content Remove="wwwroot\dist\out-tsc\app\employee-dashboard\employee-dashboard.component.spec.js.map" />
+	  <Content Remove="wwwroot\dist\out-tsc\main.js" />
+	  <Content Remove="wwwroot\dist\out-tsc\main.js.map" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="wwwroot\dist\out-tsc\app\app-routing.module.js" />
+	  <None Include="wwwroot\dist\out-tsc\app\app-routing.module.js.map" />
+	  <None Include="wwwroot\dist\out-tsc\app\app.component.js" />
+	  <None Include="wwwroot\dist\out-tsc\app\app.component.js.map" />
+	  <None Include="wwwroot\dist\out-tsc\app\app.component.spec.js" />
+	  <None Include="wwwroot\dist\out-tsc\app\app.component.spec.js.map" />
+	  <None Include="wwwroot\dist\out-tsc\app\app.module.js" />
+	  <None Include="wwwroot\dist\out-tsc\app\app.module.js.map" />
+	  <None Include="wwwroot\dist\out-tsc\app\employee-dashboard\employee-dashboard.component.js" />
+	  <None Include="wwwroot\dist\out-tsc\app\employee-dashboard\employee-dashboard.component.js.map" />
+	  <None Include="wwwroot\dist\out-tsc\app\employee-dashboard\employee-dashboard.component.spec.js" />
+	  <None Include="wwwroot\dist\out-tsc\app\employee-dashboard\employee-dashboard.component.spec.js.map" />
+	  <None Include="wwwroot\dist\out-tsc\main.js" />
+	  <None Include="wwwroot\dist\out-tsc\main.js.map" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.15" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.23" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.23" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.23" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.23" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.23">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+  </ItemGroup>
+	
+<ItemGroup>
+  <None Update="ClientApp\**\*;wwwroot\**\*">
+    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+  </None>
+</ItemGroup>
+
+
+</Project>
